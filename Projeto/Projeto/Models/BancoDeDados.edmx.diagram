@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d71a1584fe9e4ec59a918a5790769b35" Name="Diagram1" >
+        <EntityTypeShape EntityType="BancoDeDados.Jogador" Width="1.5" PointX="2.625" PointY="1.75" />
+        <EntityTypeShape EntityType="BancoDeDados.Posicao" Width="1.5" PointX="6" PointY="1.75" />
+        <AssociationConnector Association="BancoDeDados.JogadorPosicao" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
