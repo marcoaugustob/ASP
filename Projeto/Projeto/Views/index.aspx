@@ -4,14 +4,12 @@
     <h1>Cadastros</h1>
     <div class="row">
         <div class="column">
-            <asp:Button ID="btnCadastrarPosição" Text="Cadastre uma posição" runat="server" OnClick="btnCadastrarPosição_Click" />
-        </div>
+    <asp:TextBox ID="txtNomeJogador" runat="server"></asp:TextBox>
+            </div>
         <div class="column">
-            <asp:Button ID="btnCadastrarJogador" Text="Cadastre um jogador" runat="server" OnClick="btnCadastrarJogador_Click" />
+            <asp:Button ID="btnBuscar" Text="" runat="server" OnClick="btnCadastrarJogador_Click" ForeColor="Black" />
         </div>
-    </div>
-    <div class="row">
-            <asp:Button ID="btnListar" Text="Listar jogadores" runat="server" OnClick="btnListar_Click" />
+
     </div>
 
 </asp:Content>

@@ -13,30 +13,21 @@ namespace Projeto.Views {
     public partial class index {
         
         /// <summary>
-        /// btnCadastrarPosição control.
+        /// txtNomeJogador control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCadastrarPosição;
+        protected global::System.Web.UI.WebControls.TextBox txtNomeJogador;
         
         /// <summary>
-        /// btnCadastrarJogador control.
+        /// btnBuscar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCadastrarJogador;
-        
-        /// <summary>
-        /// btnListar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnListar;
+        protected global::System.Web.UI.WebControls.Button btnBuscar;
     }
 }
