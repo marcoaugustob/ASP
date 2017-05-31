@@ -1,4 +1,5 @@
-﻿using Aula2505.Models;
+﻿using Aula2505.Controllers;
+using Aula2505.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,15 +18,15 @@ namespace Aula2505.Views.Categorias
 
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
-            BaseDadosContainer ctx = new BaseDadosContainer();
+            CategoriasController ctrl = new CategoriasController();
             Categoria categoria = new Categoria();
             categoria.Nome = txtNome.Text;
             categoria.Descricao = txtDesc.Text;
-            ctx.Categorias.Add(categoria);
+            ctrl.Adicionar(categoria);
         }
 
         protected void btnLimpar_Click(object sender, EventArgs e)
-        { 
+        {
             txtNome.Text = string.Empty;
             txtDesc.Text = string.Empty;
             chkAtivo.Checked = false;
