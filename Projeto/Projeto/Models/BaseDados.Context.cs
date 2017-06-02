@@ -13,10 +13,10 @@ namespace Projeto.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BancoDeDadosContainer : DbContext
+    public partial class BaseDadosContainer : DbContext
     {
-        public BancoDeDadosContainer()
-            : base("name=BancoDeDadosContainer")
+        public BaseDadosContainer()
+            : base("name=BaseDadosContainer")
         {
         }
     

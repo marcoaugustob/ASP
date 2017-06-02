@@ -51,9 +51,12 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Cadastrar Posição</a></li>
-                        <li><a runat="server" href="~/">Cadastrar Jogador</a></li>
-                        <li><a runat="server" href="~/">Listar</a></li>
+                        <li><a runat="server" href="~/Views/CadastroPosicao.aspx">Cadastrar Posição</a></li>
+                        <li><a runat="server" href="~/Views/CadJogador.aspx">Cadastrar Jogador</a></li>
+                        <li><a runat="server" href="~/Views/EditarJogador.aspx">Editar Jogador</a></li>
+                        <li><a runat="server" href="~/Views/ListadeJogadores.aspx">Listar Jogadores</a></li>
+                        <li><a runat="server" href="~/Views/ListaPosi.aspx">Listar Posições</a></li>
+
                     </ul>
                 </div>
             </div>

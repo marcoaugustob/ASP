@@ -10,7 +10,7 @@
 namespace Projeto.Views {
     
     
-    public partial class CadastroPosicao {
+    public partial class CadJogador {
         
         /// <summary>
         /// UpdatePanel1 control.
@@ -22,58 +22,58 @@ namespace Projeto.Views {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// txtBuscaPosicao control.
+        /// lblNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBuscaPosicao;
+        protected global::System.Web.UI.WebControls.Label lblNome;
         
         /// <summary>
-        /// btnBuscarPosi control.
+        /// txtNome control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscarPosi;
+        protected global::System.Web.UI.WebControls.TextBox txtNome;
         
         /// <summary>
-        /// lblPosicao control.
+        /// lblPosi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPosicao;
+        protected global::System.Web.UI.WebControls.Label lblPosi;
         
         /// <summary>
-        /// txtPosi control.
+        /// lista control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtPosi;
+        protected global::System.Web.UI.WebControls.DropDownList lista;
         
         /// <summary>
-        /// lblDesc control.
+        /// lblTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDesc;
+        protected global::System.Web.UI.WebControls.Label lblTime;
         
         /// <summary>
-        /// txtDesc control.
+        /// txtTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesc;
+        protected global::System.Web.UI.WebControls.TextBox txtTime;
         
         /// <summary>
         /// btnCadastrar control.
@@ -92,23 +92,5 @@ namespace Projeto.Views {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCadastrarLimpar;
-        
-        /// <summary>
-        /// btnEditar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEditar;
-        
-        /// <summary>
-        /// btnExcluir control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExcluir;
     }
 }

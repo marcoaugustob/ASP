@@ -170,24 +170,24 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\BancoDeDados.edmx">
+    <EntityDeploy Include="Models\BaseDados.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BancoDeDados.Designer.cs</LastGenOutput>
+      <LastGenOutput>BaseDados.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\BancoDeDados.Context.tt">
+    <Content Include="Models\BaseDados.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BancoDeDados.Context.cs</LastGenOutput>
-      <DependentUpon>BancoDeDados.edmx</DependentUpon>
+      <LastGenOutput>BaseDados.Context.cs</LastGenOutput>
+      <DependentUpon>BaseDados.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\BancoDeDados.edmx.diagram">
-      <DependentUpon>BancoDeDados.edmx</DependentUpon>
+    <Content Include="Models\BaseDados.edmx.diagram">
+      <DependentUpon>BaseDados.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Models\BancoDeDados.edmx.sql" />
-    <Content Include="Models\BancoDeDados.tt">
+    <Content Include="Models\BaseDados.edmx.sql" />
+    <Content Include="Models\BaseDados.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BancoDeDados.cs</LastGenOutput>
-      <DependentUpon>BancoDeDados.edmx</DependentUpon>
+      <LastGenOutput>BaseDados.cs</LastGenOutput>
+      <DependentUpon>BaseDados.edmx</DependentUpon>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -220,8 +220,11 @@
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\CadastroPosicao.aspx" />
+    <Content Include="Views\CadJogador.aspx" />
+    <Content Include="Views\EditarJogador.aspx" />
     <Content Include="Views\index.aspx" />
     <Content Include="Views\ListadeJogadores.aspx" />
+    <Content Include="Views\ListaPosi.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -244,6 +247,8 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\JogadorController.cs" />
+    <Compile Include="Controllers\PosicaoController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,26 +259,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BancoDeDados.Context.cs">
+    <Compile Include="Models\BaseDados.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BancoDeDados.Context.tt</DependentUpon>
+      <DependentUpon>BaseDados.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\BancoDeDados.cs">
+    <Compile Include="Models\BaseDados.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
+      <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\BancoDeDados.Designer.cs">
+    <Compile Include="Models\BaseDados.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BancoDeDados.edmx</DependentUpon>
+      <DependentUpon>BaseDados.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Jogador.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
+      <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Posicao.cs">
-      <DependentUpon>BancoDeDados.tt</DependentUpon>
+      <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -304,6 +309,20 @@
     <Compile Include="Views\CadastroPosicao.aspx.designer.cs">
       <DependentUpon>CadastroPosicao.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadJogador.aspx.cs">
+      <DependentUpon>CadJogador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CadJogador.aspx.designer.cs">
+      <DependentUpon>CadJogador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditarJogador.aspx.cs">
+      <DependentUpon>EditarJogador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\EditarJogador.aspx.designer.cs">
+      <DependentUpon>EditarJogador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -318,10 +337,16 @@
     <Compile Include="Views\ListadeJogadores.aspx.designer.cs">
       <DependentUpon>ListadeJogadores.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListaPosi.aspx.cs">
+      <DependentUpon>ListaPosi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ListaPosi.aspx.designer.cs">
+      <DependentUpon>ListaPosi.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

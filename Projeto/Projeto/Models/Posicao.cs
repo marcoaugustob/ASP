@@ -14,10 +14,17 @@ namespace Projeto.Models
     
     public partial class Posicao
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Posicao()
+        {
+            this.Jogador = new HashSet<Jogador>();
+        }
+    
         public int Id { get; set; }
         public string Funcao { get; set; }
-        public string Descrição { get; set; }
+        public string DescTati { get; set; }
     
-        public virtual Jogador Jogador { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Jogador> Jogador { get; set; }
     }
 }

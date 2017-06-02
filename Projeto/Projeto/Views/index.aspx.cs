@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Projeto.Controllers;
+using Projeto.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,22 +15,13 @@ namespace Projeto.Views
         {
 
         }
-
-        protected void btnCadastrarPosição_Click(object sender, EventArgs e)
+        protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            CadastroPosicao cadPosi = new CadastroPosicao();
-            //Form.InnerHtml= cadPosi;
-        }
-
-
-        protected void btnCadastrarJogador_Click(object sender, EventArgs e)
-        {
-            //Form.Load
-        }
-
-        protected void btnListar_Click(object sender, EventArgs e)
-        {
-
+            Jogador joga = new Jogador();
+            JogadorController jCtrl = new JogadorController();
+            joga = jCtrl.BuscaIdJoga(txtNomeJogador.Text);
+            Session.Add("objJogado", joga);
+            Response.Redirect("~/EditarJogador.aspx");
         }
     }
 }
