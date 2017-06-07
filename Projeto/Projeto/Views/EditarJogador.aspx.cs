@@ -21,24 +21,24 @@ namespace Projeto.Views
             {
                 lista.Items.Add(item.Funcao);
             }
-            jogador = (Jogador)Session["Jogado"];
+            
+            //jogador = (Jogador)Session["Jogado"];
 
-            txtNome.Text = jogador.Nome.ToString();
-            txtTime.Text = jogador.Time.ToString();
-            lista.Text = jogador.Posicao.ToString();
+            //txtNome.Text = jogador.Nome.ToString();
+            //txtTime.Text = jogador.Time.ToString();
+            //lista.Text = jogador.Posicao.ToString();
 
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
+            jogador = new Jogador();
+            jogador = jCtrl.BuscaIdJoga(txtNomeJogador.Text);
+            txtNome.Text = jogador.Nome.ToString();
+            txtTime.Text = jogador.Time.ToString();
+            lista.Text = jogador.Posicao.ToString();
             try
             {
-
-                jogador = new Jogador();
-                jogador = jCtrl.BuscaIdJoga(txtNomeJogador.Text);
-                txtNome.Text = jogador.Nome.ToString();
-                txtTime.Text = jogador.Time.ToString();
-                lista.Text = jogador.Posicao.ToString();
                 jogador = (Jogador)Session["Jogado"];
             }
             catch (Exception)

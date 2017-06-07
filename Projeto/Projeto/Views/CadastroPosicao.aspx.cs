@@ -63,13 +63,14 @@ namespace Projeto.Views
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
+            Posicao posi = new Posicao();
+            posi.Funcao = txtPosi.Value;
+            posi.DescTati = txtDesc.Text;
+
             try
             {
 
-                Posicao posi = new Posicao();
-                posi.Funcao = txtPosi.Value;
-                posi.DescTati = txtDesc.Text;
-
+             
                 ctrl.Editar(posi);
 
             }

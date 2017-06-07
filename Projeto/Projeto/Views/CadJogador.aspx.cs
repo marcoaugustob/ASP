@@ -22,15 +22,14 @@ namespace Projeto.Views
         }
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
+            JogadorController ctrl = new JogadorController();
+            PosicaoController ctrl2 = new PosicaoController();
+            Jogador joga = new Jogador();
+            joga.Nome = txtNome.Text;
+            joga.Posicao = ctrl2.BuscaIdPosi(lista.Text);
+            joga.Time = txtTime.Text;
             try
             {
-
-                JogadorController ctrl = new JogadorController();
-                PosicaoController ctrl2 = new PosicaoController();
-                Jogador joga = new Jogador();
-                joga.Nome = txtNome.Text;
-                joga.Posicao = ctrl2.BuscaIdPosi(lista.Text);
-                joga.Time = txtTime.Text;
                 ctrl.Adicionar(joga);
             }
             catch (Exception)
