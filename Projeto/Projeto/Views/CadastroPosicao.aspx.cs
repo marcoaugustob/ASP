@@ -12,6 +12,9 @@ namespace Projeto.Views
     public partial class CadastroPosicao : System.Web.UI.Page
     {
         PosicaoController ctrl = new PosicaoController();
+        Posicao posicao = new Posicao();
+
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -47,11 +50,10 @@ namespace Projeto.Views
             try
             {
 
-                Posicao posicao = new Posicao();
-                posicao = ctrl.BuscaIdPosi(txtBuscaPosicao.Text);
+                posicao = ctrl.BuscaIdPosi(Convert.ToInt32(txtBuscaPosicao.Text));
                 txtPosi.Value = posicao.Funcao.ToString();
                 txtDesc.Text = posicao.DescTati.ToString();
-                posicao = (Posicao)Session["Posicao"];
+                ViewState.Add("IdPosi", posicao.Id);
 
             }
             catch (Exception)
@@ -63,21 +65,20 @@ namespace Projeto.Views
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            Posicao posi = new Posicao();
-            posi.Funcao = txtPosi.Value;
-            posi.DescTati = txtDesc.Text;
-
+            posicao.Funcao = txtPosi.Value;
+            posicao.DescTati = txtDesc.Text;
+            posicao.Id = Convert.ToInt32(ViewState["IdPosi"].ToString());
             try
             {
 
              
-                ctrl.Editar(posi);
+                ctrl.Editar(posicao);
 
             }
             catch (Exception)
             {
 
-                throw;
+               throw;
             }
         }
 
@@ -85,7 +86,7 @@ namespace Projeto.Views
         {
             PosicaoController posicao = new PosicaoController();
             Posicao PosICaoParaSerExcluida = new Posicao();
-            PosICaoParaSerExcluida = posicao.BuscaIdPosi(txtBuscaPosicao.Text);
+            PosICaoParaSerExcluida = posicao.BuscaIdPosi(Convert.ToInt32(txtBuscaPosicao.Text));
             try
             {
                 posicao.Excluir(PosICaoParaSerExcluida);

@@ -37,9 +37,9 @@ namespace Projeto.Controllers
             ctx.Entry(pos).State = System.Data.Entity.EntityState.Deleted;
             ctx.SaveChanges();
         }
-        public Posicao BuscaIdPosi(string funcao)
+        public Posicao BuscaIdPosi(int funcaoid)
         {
-            return ctx.PosicaoSet.FirstOrDefault(p => p.Funcao.Equals(funcao));
+            return ctx.PosicaoSet.FirstOrDefault(p => p.Id == funcaoid);
         }
     }
 }

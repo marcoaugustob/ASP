@@ -11,7 +11,7 @@
                     <asp:TextBox ID="txtNomeJogador" Style="text-align: center" runat="server"></asp:TextBox>
                 </div>
                 <div class="column">
-                    <asp:Button ID="btnBuscar" Text="" Style="text-align: center" runat="server" OnClick="btnBuscar_Click" ForeColor="Black" />
+                    <asp:Button ID="btnBuscar" Text="Buscar" Style="text-align: center" runat="server" OnClick="btnBuscar_Click" ForeColor="Black" />
                 </div>
             </div>
 
@@ -21,9 +21,8 @@
                 <asp:TextBox ID="txtNome" runat="server" />
             </div>
            <div class="row">
-               <asp:Label ID="lblPosi" Text="Posição:" runat="server"></asp:Label>
-                 
-               <asp:DropDownList ID="lista" runat="server" />
+                  <asp:Label ID="lblidPosi" Text="IdPosi:" runat="server" />
+                <asp:TextBox ID="txtidPosi" runat="server" />
             </div>
                <div class="row">
                 <asp:Label ID="lblTime" Text="Time:" runat="server"></asp:Label>

@@ -14,11 +14,7 @@ namespace Projeto.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            PosicaoController posi = new PosicaoController();
-            foreach (var item in posi.Listar())
-            {
-                lista.Items.Add(item.Funcao);
-            }
+   
         }
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -26,7 +22,7 @@ namespace Projeto.Views
             PosicaoController ctrl2 = new PosicaoController();
             Jogador joga = new Jogador();
             joga.Nome = txtNome.Text;
-            joga.Posicao = ctrl2.BuscaIdPosi(lista.Text);
+            joga.PosicaoId = Convert.ToInt32(txtIdPosi.Text);
             joga.Time = txtTime.Text;
             try
             {
@@ -42,7 +38,7 @@ namespace Projeto.Views
         protected void btnCadastrarLimpar_Click(object sender, EventArgs e)
         {
             txtNome.Text = string.Empty;
-            lista.Text= string.Empty;
+            txtIdPosi.Text= string.Empty;
             txtTime.Text = string.Empty;
         }
     }

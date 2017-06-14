@@ -15,49 +15,27 @@ namespace Projeto.Views
         JogadorController jCtrl = new JogadorController();
 
         protected void Page_Load(object sender, EventArgs e)
-        {
-            PosicaoController posi = new PosicaoController();
-            foreach (var item in posi.Listar())
-            {
-                lista.Items.Add(item.Funcao);
-            }
-            
-            //jogador = (Jogador)Session["Jogado"];
-
-            //txtNome.Text = jogador.Nome.ToString();
-            //txtTime.Text = jogador.Time.ToString();
-            //lista.Text = jogador.Posicao.ToString();
+        {    
 
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            jogador = new Jogador();
             jogador = jCtrl.BuscaIdJoga(txtNomeJogador.Text);
             txtNome.Text = jogador.Nome.ToString();
             txtTime.Text = jogador.Time.ToString();
-            lista.Text = jogador.Posicao.ToString();
-            try
-            {
-                jogador = (Jogador)Session["Jogado"];
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
+            txtidPosi.Text = jogador.Posicao.Id.ToString();
+            ViewState.Add("IdJog", jogador.Id);
         }
 
         protected void btnEdita_Click(object sender, EventArgs e)
         {
             try
             {
-
-                jogador = new Jogador();
                 jogador.Nome = txtNome.Text;
                 jogador.Time = txtTime.Text;
-                jogador.Posicao.Funcao = lista.Text;
-
+                jogador.Posicao.Funcao = txtidPosi.Text;
+                jogador.Id =  Convert.ToInt32(ViewState["IdJog"].ToString());
                 jCtrl.Editar(jogador);
             }
             catch (Exception)

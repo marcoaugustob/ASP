@@ -58,22 +58,22 @@ namespace Projeto.Views {
         protected global::System.Web.UI.WebControls.TextBox txtNome;
         
         /// <summary>
-        /// lblPosi control.
+        /// lblidPosi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPosi;
+        protected global::System.Web.UI.WebControls.Label lblidPosi;
         
         /// <summary>
-        /// lista control.
+        /// txtidPosi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList lista;
+        protected global::System.Web.UI.WebControls.TextBox txtidPosi;
         
         /// <summary>
         /// lblTime control.

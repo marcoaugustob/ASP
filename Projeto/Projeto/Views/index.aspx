@@ -7,7 +7,7 @@
             <div class="input-group">
                 <asp:TextBox ID="txtNomeJogador" CssClass="form-control" placeholder="Insira aqui o nome" runat="server"></asp:TextBox>
                 <span class="input-group-btn">
-                    <asp:Button ID="btnBuscar" CssClass="btn btn-default" runat="server" OnClick="btnBuscar_Click" ForeColor="Black" />
+                    <asp:Button ID="btnBuscar" Text="Buscar" CssClass="btn btn-default" runat="server" OnClick="btnBuscar_Click" ForeColor="Black" />
                 </span>
             </div>
         </div>

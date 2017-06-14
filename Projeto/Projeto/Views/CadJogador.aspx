@@ -11,9 +11,8 @@
                 <asp:TextBox ID="txtNome" runat="server" />
             </div>
            <div class="row">
-               <asp:Label ID="lblPosi" Text="Posição:" runat="server"></asp:Label>
-                 
-               <asp:DropDownList ID="lista" runat="server" />
+              <asp:Label ID="lblIdPosi" Text="IdPosi:" runat="server" />
+                <asp:TextBox ID="txtIdPosi" runat="server" />
             </div>
                <div class="row">
                 <asp:Label ID="lblTime" Text="Time:" runat="server"></asp:Label>
